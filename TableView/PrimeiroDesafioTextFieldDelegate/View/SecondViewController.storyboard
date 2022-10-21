@@ -40,6 +40,46 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FwX-gE-2kQ">
+                                <rect key="frame" x="0.0" y="291" width="390" height="519"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cel01" rowHeight="182" id="W0c-LC-5eY" customClass="SecondViewTableViewCell" customModule="PrimeiroDesafioTextFieldDelegate" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="182"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W0c-LC-5eY" id="7tn-nk-EvZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="182"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="P8a-KJ-LEJ">
+                                                    <rect key="frame" x="30" y="21" width="150" height="160"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="150" id="5AD-oW-Q9J"/>
+                                                        <constraint firstAttribute="height" constant="137" id="Zg6-7h-HT2"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marca De Carro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4dS-7Q-mG6">
+                                                    <rect key="frame" x="209.99999999999997" y="80.666666666666671" width="119.66666666666666" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="4dS-7Q-mG6" firstAttribute="centerY" secondItem="7tn-nk-EvZ" secondAttribute="centerY" id="D6R-Vg-akl"/>
+                                                <constraint firstItem="P8a-KJ-LEJ" firstAttribute="leading" secondItem="7tn-nk-EvZ" secondAttribute="leadingMargin" constant="10" id="U24-rC-Y1h"/>
+                                                <constraint firstItem="4dS-7Q-mG6" firstAttribute="leading" secondItem="P8a-KJ-LEJ" secondAttribute="trailing" constant="30" id="q6U-P2-kIa"/>
+                                                <constraint firstItem="P8a-KJ-LEJ" firstAttribute="bottom" secondItem="7tn-nk-EvZ" secondAttribute="bottomMargin" constant="10" id="wMZ-HA-OSp"/>
+                                                <constraint firstItem="P8a-KJ-LEJ" firstAttribute="top" secondItem="7tn-nk-EvZ" secondAttribute="topMargin" constant="10" id="zCR-qc-cDB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="brandCarLabel" destination="4dS-7Q-mG6" id="V7H-eH-yad"/>
+                                            <outlet property="logoCarImageView" destination="P8a-KJ-LEJ" id="3pd-ZV-6KU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBrownColor"/>
@@ -47,9 +87,13 @@
                             <constraint firstItem="cd1-DV-Qy8" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="06L-0B-ISn"/>
                             <constraint firstItem="ha4-Ih-cWP" firstAttribute="top" secondItem="YGT-xb-2jN" secondAttribute="bottom" constant="25" id="0wD-W9-7mJ"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ha4-Ih-cWP" secondAttribute="trailing" constant="20" id="2LU-Yl-anX"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="FwX-gE-2kQ" secondAttribute="bottom" id="4qu-6q-Yjq"/>
                             <constraint firstItem="YGT-xb-2jN" firstAttribute="top" secondItem="cd1-DV-Qy8" secondAttribute="bottom" constant="25" id="5Rg-tc-c0W"/>
                             <constraint firstItem="KXI-Jg-1v2" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="82k-kq-Ef7"/>
+                            <constraint firstItem="FwX-gE-2kQ" firstAttribute="top" secondItem="ha4-Ih-cWP" secondAttribute="bottom" constant="25" id="G6J-1G-4JH"/>
                             <constraint firstItem="cd1-DV-Qy8" firstAttribute="top" secondItem="KXI-Jg-1v2" secondAttribute="bottom" constant="25" id="NhE-oi-QW5"/>
+                            <constraint firstItem="FwX-gE-2kQ" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="aFZ-WK-arp"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="FwX-gE-2kQ" secondAttribute="trailing" id="cJX-jW-w6U"/>
                             <constraint firstItem="KXI-Jg-1v2" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="60" id="d6b-7K-CWN"/>
                             <constraint firstItem="ha4-Ih-cWP" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="20" id="hzF-Zf-buy"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="YGT-xb-2jN" secondAttribute="trailing" constant="20" id="iH1-5n-Akv"/>
@@ -63,14 +107,18 @@
                         <outlet property="lastNameLabel" destination="cd1-DV-Qy8" id="NJZ-37-00T"/>
                         <outlet property="nameLabel" destination="KXI-Jg-1v2" id="5Qn-WW-2eG"/>
                         <outlet property="professionLabel" destination="ha4-Ih-cWP" id="Zjh-aE-DPO"/>
+                        <outlet property="tableView" destination="FwX-gE-2kQ" id="CQC-4E-Xao"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-348" y="17"/>
+            <point key="canvasLocation" x="-349.23076923076923" y="16.350710900473931"/>
         </scene>
     </scenes>
     <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
