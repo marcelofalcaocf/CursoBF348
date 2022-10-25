@@ -17,9 +17,9 @@ class SecondViewController: UIViewController {
     var person: Pessoa?
     
     var cars: [Car] = [Car(brand: "Fiat", color: "Azul", model: "Uno", imageName: "Fiat"),
-                       Car(brand: "Chevrolet", color: "Branco", model: "Cruze",  imageName: "Fiat"),
-                       Car(brand: "VW", color: "Preto", model: "Gol",  imageName: "Fiat"),
-                       Car(brand: "Renault", color: "Amarelo", model: "Kwid",  imageName: "Fiat")
+                       Car(brand: "Chevrolet", color: "Branco", model: "Cruze",  imageName: "Chevrolet"),
+                       Car(brand: "VW", color: "Preto", model: "Gol",  imageName: "Volkswagen"),
+                       Car(brand: "Renault", color: "Amarelo", model: "Kwid",  imageName: "Renault")
     ]
     
     override func viewDidLoad() {
@@ -43,10 +43,18 @@ class SecondViewController: UIViewController {
 }
 
 extension SecondViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print(cars[indexPath.row])
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 250
+    }
     
 }
 
 extension SecondViewController: UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cars.count
     }
